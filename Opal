@@ -1598,7 +1598,7 @@ do
 						Size = UDim2.new(0.8, 0, 1, 0),
 						ZIndex = 3,
 						Image = "rbxassetid://5028857472",
-						ImageColor3 = Color3.fromRGB(0, 170, 255),  -- Predefined color here
+						ImageColor3 = Color3.fromRGB(173, 216, 230),  -- Lighter predefined color here
 						ScaleType = Enum.ScaleType.Slice,
 						SliceCenter = Rect.new(2, 2, 298, 298)
 					}, {
@@ -1644,7 +1644,7 @@ do
 		
 		utility:DraggingEnded(function()
 			dragging = false
-			end)
+		end)
 	
 		slider.MouseButton1Down:Connect(function(input)
 			dragging = true
@@ -1682,6 +1682,7 @@ do
 		
 		return slider
 	end
+	
 	
 	
 	function section:addDropdown(title, list, callback)
