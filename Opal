@@ -503,12 +503,13 @@ function initLibrary()
                 for _, obj in next, tabTogglesHolder:GetChildren() do
                     if obj:IsA("TextButton") then
                         obj.Font = Enum.Font.Gotham
+                        obj.TextColor3 = Color3.fromRGB(180, 180, 180)
                     end
                 end
 
 
                 tabToggle.Font = Enum.Font.GothamSemibold
-                tabToggle.TextColor3 = Color3.fromRGB(255, 255, 0) -- Active tab color
+                tabToggle.TextColor3 = Color3.fromRGB(255, 209, 210) -- Active tab color
 
                 for _, obj in next, tabs:GetChildren() do
                     obj.Visible = false
