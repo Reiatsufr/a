@@ -1,19 +1,22 @@
 ocal Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), game:GetService("CoreGui"), cloneref(game:GetService("Lighting"))
 
 local ESP = {
-    Enabled = true,
-    TeamCheck = true,
+    Enabled = false,  -- Set to false to disable ESP by default
+    TeamCheck = false, -- Disable team check by default
     MaxDistance = 200,
     FontSize = 11,
     FadeOut = {
-        OnDistance = true,
-        OnDeath = false,
-        OnLeave = false,
+        OnDistance = false, -- Disable fade out on distance
+        OnDeath = false, -- Disable fade out on death
+        OnLeave = false, -- Disable fade out on leave
     },
     Options = { 
-        Teamcheck = false, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
-        Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
-        Highlight = false, HighlightRGB = Color3.fromRGB(255, 0, 0),
+        Teamcheck = false, -- Disable teamcheck
+        TeamcheckRGB = Color3.fromRGB(0, 255, 0),
+        Friendcheck = false, -- Disable friendcheck
+        FriendcheckRGB = Color3.fromRGB(0, 255, 0),
+        Highlight = false, -- Disable highlight
+        HighlightRGB = Color3.fromRGB(255, 0, 0),
     },
     Drawing = {
         Chams = {
@@ -26,45 +29,49 @@ local ESP = {
             VisibleCheck = true,
         },
         Names = {
-            Enabled = true,
+            Enabled = false, -- Disable names by default
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Flags = {
-            Enabled = true,
+            Enabled = false, -- Disable flags by default
         },
         Distances = {
-            Enabled = true, 
+            Enabled = false, -- Disable distances by default
             Position = "Text",
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Weapons = {
-            Enabled = true, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
+            Enabled = false, -- Disable weapon display by default
+            WeaponTextRGB = Color3.fromRGB(119, 120, 255),
             Outlined = false,
             Gradient = false,
             GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(119, 120, 255),
         },
         Healthbar = {
-            Enabled = true,  
-            HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(119, 120, 255),
+            Enabled = false, -- Disable healthbar by default
+            HealthText = false, -- Disable health text by default
+            Lerp = false,
+            HealthTextRGB = Color3.fromRGB(119, 120, 255),
             Width = 2.5,
-            Gradient = true, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
+            Gradient = false, -- Disable healthbar gradient by default
+            GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
         },
         Boxes = {
             Animate = false,
             RotationSpeed = 300,
             Gradient = false, GradientRGB1 = Color3.fromRGB(119, 120, 255), GradientRGB2 = Color3.fromRGB(0, 0, 0), 
-            GradientFill = true, GradientFillRGB1 = Color3.fromRGB(119, 120, 255), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
+            GradientFill = false, GradientFillRGB1 = Color3.fromRGB(119, 120, 255), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
             Filled = {
-                Enabled = true,
+                Enabled = false, -- Disable filled boxes by default
                 Transparency = 0.75,
                 RGB = Color3.fromRGB(0, 0, 0),
             },
             Full = {
-                Enabled = true,
+                Enabled = false, -- Disable full boxes by default
                 RGB = Color3.fromRGB(255, 255, 255),
             },
             Corner = {
-                Enabled = true,
+                Enabled = false, -- Disable corner boxes by default
                 RGB = Color3.fromRGB(255, 255, 255),
             },
         };
@@ -74,6 +81,7 @@ local ESP = {
     };
     Fonts = {};
 }
+
 
 -- Def & Vars
 local Euphoria = ESP.Connections;
